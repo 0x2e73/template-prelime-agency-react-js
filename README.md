@@ -1,4 +1,4 @@
-# My React JS Website
+# WEB AGENCY TEMPLATE
 
 This project is a React JS adaptation of a [Preline](https://preline.co/templates/agency/index.html) template originally developed in HTML/Tailwind CSS. I've preserved all the visual advantages of the template while adding the power of React and custom animations for an enhanced user experience.
 
