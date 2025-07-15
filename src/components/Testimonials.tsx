@@ -2,7 +2,7 @@ import React from 'react';
 
 const Testimonials: React.FC = () => {
   return (
-    <div className="bg-neutral-900">
+    <section id='testimonials' className="bg-neutral-900">
       <div className="max-w-5xl px-4 xl:px-0 py-10 lg:py-20 mx-auto">
         {/* Title */}
         <div className="max-w-3xl mb-10 lg:mb-14">
@@ -43,7 +43,7 @@ const Testimonials: React.FC = () => {
         </div>
         {/* End Grid */}
       </div>
-    </div>
+    </section>
   );
 };
 

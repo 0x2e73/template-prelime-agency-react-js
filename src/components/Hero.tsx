@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Hero: React.FC = () => {
   return (
-    <div className="bg-neutral-900">
+    <section id='hero' className="bg-neutral-900">
       <div className="max-w-5xl mx-auto px-4 xl:px-0 pt-24 lg:pt-32 pb-24">
         <motion.h1 
           className="font-semibold text-white text-5xl md:text-6xl"
@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
           </p>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 

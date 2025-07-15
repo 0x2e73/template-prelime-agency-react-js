@@ -3,7 +3,7 @@ import FadeInWhenVisible from './FadeInWhenVisible';
 
 const CaseStudies: React.FC = () => {
   return (
-    <div className="bg-neutral-900 bg-linear-to-t from-black to-transparent">
+    <section id='stories' className="bg-neutral-900 bg-linear-to-t from-black to-transparent">
       <div className="max-w-5xl px-4 xl:px-0 py-24 mx-auto">
         <FadeInWhenVisible>
           <div className="max-w-3xl mb-10 lg:mb-14">
@@ -81,7 +81,7 @@ const CaseStudies: React.FC = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

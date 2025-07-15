@@ -1,21 +1,11 @@
 import React, { useState } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isCompanyDropdownOpen, setIsCompanyDropdownOpen] = useState(false);
-  const [isResourcesDropdownOpen, setIsResourcesDropdownOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  };
-
-  const toggleCompanyDropdown = () => {
-    setIsCompanyDropdownOpen(!isCompanyDropdownOpen);
-  };
-
-  const toggleResourcesDropdown = () => {
-    setIsResourcesDropdownOpen(!isResourcesDropdownOpen);
   };
 
   return (
@@ -55,54 +45,10 @@ const Header: React.FC = () => {
         {/* Collapse */}
         <div id="hs-navbar-floating-dark" className={`${isMenuOpen ? 'block' : 'hidden'} md:block overflow-hidden transition-all duration-300 basis-full grow`}>
           <div className="flex flex-col md:flex-row md:items-center md:justify-end gap-y-3 py-2 md:py-0 md:ps-7">
-            <a className="pe-3 ps-px sm:px-3 md:py-4 text-sm text-white hover:text-neutral-300 focus:outline-hidden focus:text-neutral-300" href="/" aria-current="page">Home</a>
-            <a className="pe-3 ps-px sm:px-3 md:py-4 text-sm text-white hover:text-neutral-300 focus:outline-hidden focus:text-neutral-300" href="#">Stories</a>
-            <a className="pe-3 ps-px sm:px-3 md:py-4 text-sm text-white hover:text-neutral-300 focus:outline-hidden focus:text-neutral-300" href="#">Reviews</a>
-            <a className="pe-3 ps-px sm:px-3 md:py-4 text-sm text-white hover:text-neutral-300 focus:outline-hidden focus:text-neutral-300" href="#">Approach</a>
-
-            <div className="relative pe-3 ps-px sm:px-3 md:py-4">
-              <button
-                id="hs-dropdown-floating-dark"
-                type="button"
-                className="flex items-center w-full text-sm text-white hover:text-neutral-300 focus:outline-hidden focus:text-neutral-300"
-                aria-expanded={isCompanyDropdownOpen}
-                onClick={toggleCompanyDropdown}
-              >
-                Company
-                <ChevronDown className={`transition-transform duration-300 ml-1 size-4 ${isCompanyDropdownOpen ? 'rotate-180' : ''}`} />
-              </button>
-
-              {isCompanyDropdownOpen && (
-                <div className="absolute left-0 mt-2 bg-neutral-800 shadow-md rounded-lg w-48 py-1 px-1 z-10">
-                  <a className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-white hover:text-neutral-300 focus:outline-hidden focus:text-neutral-300" href="#">About</a>
-                  
-                  <div className="relative">
-                    <button
-                      id="hs-dropdown-floating-dark-sub"
-                      type="button"
-                      className="w-full flex justify-between items-center py-2 px-3 text-sm text-white hover:text-neutral-300 focus:outline-hidden focus:text-neutral-300"
-                      aria-expanded={isResourcesDropdownOpen}
-                      onClick={toggleResourcesDropdown}
-                    >
-                      Resources
-                      <ChevronDown className={`transition-transform duration-300 ml-2 size-4 -rotate-90 ${isResourcesDropdownOpen ? 'rotate-0' : ''}`} />
-                    </button>
-
-                    {isResourcesDropdownOpen && (
-                      <div className="absolute left-full top-0 ml-2 bg-neutral-800 shadow-md rounded-lg w-48 py-1 px-1 z-10">
-                        <a className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-white hover:text-neutral-300 focus:outline-hidden focus:text-neutral-300" href="#">Customer Stories</a>
-                        <a className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-white hover:text-neutral-300 focus:outline-hidden focus:text-neutral-300" href="#">Guides</a>
-                        <a className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-white hover:text-neutral-300 focus:outline-hidden focus:text-neutral-300" href="#">Contact Sales</a>
-                      </div>
-                    )}
-                  </div>
-
-                  <a className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-white hover:text-neutral-300 focus:outline-hidden focus:text-neutral-300" href="#">Jobs</a>
-                  <a className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-white hover:text-neutral-300 focus:outline-hidden focus:text-neutral-300" href="#">Newsroom</a>
-                </div>
-              )}
-            </div>
-
+            <a className="pe-3 ps-px sm:px-3 md:py-4 text-sm text-white hover:text-neutral-300 focus:outline-hidden focus:text-neutral-300" href="#hero" aria-current="page">Home</a>
+            <a className="pe-3 ps-px sm:px-3 md:py-4 text-sm text-white hover:text-neutral-300 focus:outline-hidden focus:text-neutral-300" href="#stories">Stories</a>
+            <a className="pe-3 ps-px sm:px-3 md:py-4 text-sm text-white hover:text-neutral-300 focus:outline-hidden focus:text-neutral-300" href="#testimonials">Reviews</a>
+            <a className="pe-3 ps-px sm:px-3 md:py-4 text-sm text-white hover:text-neutral-300 focus:outline-hidden focus:text-neutral-300" href="#approach">Approach</a>
             <div>
               <a className="group inline-flex items-center gap-x-2 py-2 px-3 bg-[#ff0] font-medium text-sm text-neutral-800 rounded-full focus:outline-hidden" href="#contact">
                 Contact us

@@ -3,7 +3,7 @@ import { Phone } from 'lucide-react';
 
 const Approach: React.FC = () => {
   return (
-    <div className="bg-neutral-900">
+    <section id='approach' className="bg-neutral-900">
       {/* Approach */}
       <div className="max-w-5xl px-4 xl:px-0 py-10 lg:pt-20 mx-auto">
         {/* Title */}
@@ -132,7 +132,7 @@ const Approach: React.FC = () => {
         </div>
         {/* End Grid */}
       </div>
-    </div>
+    </section>
   );
 };
 
